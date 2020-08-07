@@ -6,13 +6,16 @@ import { SafeAreaView, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { login } from '../redux/actions/authActions';
 
+// Env
+import { API_URL } from '../../env.json';
+
 export class Home extends Component {
   componentDidMount = () => {
     this.props.login();
   }
 
   render() {
-    console.log(this.props.auth);
+    console.log(API_URL);
     return (
       <SafeAreaView>
         <Text>Oke</Text>
